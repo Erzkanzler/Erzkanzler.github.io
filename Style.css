@@ -101,7 +101,7 @@ a span{
  	position:relative;
  	width:150px;
  	height: 150px;
- 	border-radius: 50%;
+ 	border-radius: 100%;
  	background:linear-gradient(45deg,transparent,transparent 40%, #e5f403);
 	animation: animate 2s linear infinite;
  }
@@ -172,4 +172,35 @@ a span{
  	margin:0;
  	padding: 0;
  	box-sizing: border-box;
+ 	font-family: 'Popins', sans-self;
+ }
+
+ h2{
+ 	position: relative;
+ 	margin: 0;
+ 	font-size: 4em;
+ 	font-weight: 900;
+ 	color:#fff;
+ 	z-index: 1;
+ 	overflow: hidden;
+ }
+h2:before{
+	content: '';
+	position: absolute;
+	left: 120%;
+	width: 120%;
+	height: 100%;
+	background: linear-gradient(90deg,transparent 0%, #000 5%, #000 100%);
+	animation: animates 5.5s linear forwards;
+}
+@keyframes animates{
+	0%{
+		left: -20%
+	}
+	100%{
+		left: 120%
+	}
+}
+ h2 span{
+ 	color:#ff022c;
  }
